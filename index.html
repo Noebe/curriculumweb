@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mi Curriculum</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style type="text/css">
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body
+{
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container
+{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background: #fff;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+}
+.container .left_Side
+{
+    position: relative;
+    background: #003147;
+    padding: 40px;
+}
+.profileText
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.profileText .imgBx
+{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profileText .imgBx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profileText h2
+{
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.profileText h2 span
+{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+.contactInfo
+{
+    padding-top: 40px;
+
+}
+.title
+{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.contactInfo ul
+{
+    position: relative;
+}
+.contactInfo ul li
+{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.contactInfo ul li .icon
+{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #03a9f4;
+}
+.contactInfo ul li span
+{
+    color: #fff;
+    font-weight: 300;
+}
+.contactInfo.education li
+{
+    margin-bottom: 15px;
+}
+.contactInfo.education h5
+{
+    color: #03a9f4;
+    font-weight: 500;
+}
+.contactInfo.education h4:nth-child(2)
+{
+    color: #fff;
+    font-weight: 500;
+}
+.contactInfo.education h4
+{
+    color: #fff;
+    font-weight: 300;
+}
+.contactInfo.language .percent
+{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #081921;
+    display: block;
+    margin-top: 5px;
+}
+.contactInfo.language .percent div
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+.container .right_Side
+{
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+.about
+{
+    margin-bottom: 50px;
+}
+.about:last-child
+{
+    margin-bottom: 0;
+}
+.title2
+{
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+p
+{
+    color: #333;
+}
+.about .box
+{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+.about .box .year_company
+{
+    min-width: 150px;
+}
+.about .box .year_company h5
+{
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+.about .box .text h4
+{
+    text-transform: uppercase;
+    color: #2a7da2;
+    font-size: 16px;
+}
+.skills .box
+{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.skills .box h4
+{
+    text-transform: uppercase;
+    color: #848c99;
+    font-weight: 500;
+}
+.skills .box .percent
+{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #f0f0f0;
+}
+.skills .box .percent div
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="left_Side">
+          <div class="profileText">
+            <div class="imgBx">
+                <img src="img/belen.jpg">
+            </div>
+            <h2>Belen Macalupu<br><span>Programadora Web</span></h2>
+          </div>
+
+          <div class="contactInfo">
+              <h3 class="title">Contacto</h3>
+              <ul>
+                  <li>
+                      <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                      <span class="text">+51 940 639 396</span>
+                  </li>
+                  <li>
+                      <span class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                      <span class="text">BelenMacalupu0601@gmail.com</span>
+                  </li>
+                  <li>
+                      <span class="icon"><i class="fa fa-globe" aria-hidden="true"></i></span>
+                      <span class="text">www.misitioweb.com</span>
+                  </li>
+                  <li>
+                      <span class="icon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
+                      <span class="text">www.linkedin.com/Noebe</span>
+                  </li>
+                  <li>
+                      <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                      <span class="text">Talara, Piura, Perú</span>
+                  </li>
+              </ul>
+          </div>
+
+          <div class="contactInfo education">
+              <h3 class="title">Educación</h3>
+              <ul>
+                  <li>
+                      <h5>2023-2026</h5>
+                      <h4>Ingeneria de Software con Inteligencia Artificial</h4>
+                      <h4>Servicio Nacional de Adiestramiento en Trabajo Industrial (SENATI)</h4>
+                  </li>
+                  <li>
+                      <h5>2017-2022</h5>
+                      <h4>Secundaria</h4>
+                      <h4>I.E N. 15513 Nuestra señora de Guadalupe</h4>
+                  </li>
+                  <li>
+                      <h5>2012-2016</h5>
+                      <h4>Primaria</h4>
+                      <h4>Semillero de Jesús</h4>
+                  </li>
+              </ul>
+          </div>
+          <div class="contactInfo language">
+              <h3 class="title">Idiomas</h3>
+              <ul>
+                  <li>
+                      <span class="text">Español</span>
+                      <span class="percent">
+                          <div style="width: 90%;"></div>
+                      </span>
+                  </li>
+                  <li>
+                      <span class="text">Ingles</span>
+                      <span class="percent">
+                          <div style="width: 48%;"></div>
+                      </span>
+                  </li>
+                  <li>
+                      <span class="text">Portugues</span>
+                      <span class="percent">
+                          <div style="width: 21%;"></div>
+                      </span>
+                  </li>
+              </ul>
+          </div>
+        </div>
+
+        <div class="right_Side">
+            <div class="about">
+                <h2 class="title2">Perfil</h2>
+                <p>
+                    ¡Hola! Soy Belén, una apasionada de la tecnología con un enfoque creativo y orientado a resultados. Como programadora web full-stack, me encanta fusionar la estética con la funcionalidad para crear experiencias digitales cautivadoras. Mi pasión por la programación se combina con mi dedicación por entender las necesidades del usuario, lo que me permite diseñar y desarrollar soluciones web intuitivas y efectivas. <br><br>Cuando no estoy programando, me encanta mantenerme al día con las últimas tendencias tecnológicas, participar en hackathons y contribuir a proyectos de código abierto. También disfruto compartiendo mis conocimientos a través de blogs y conferencias.
+                </p>
+            </div>
+            <div class="about">
+                <h2 class="title2">Experiencia</h2>
+                <div class="box">
+                    <div class="year_company">
+                        <h5>2023 - presente </h5>
+                        <h5>SENATI</h5>
+                    </div>
+                    <div class="text">
+                        <h4>Experiencia obtenida</h4>
+                        <p>
+                            Fomentar la pasión por el aprendizaje continuo. <br>
+Enseñar a resolver problemas de manera creativa y sistemática. <br>
+Promover la colaboración y el trabajo en equipo. <br>
+Destacar la importancia de escribir código de calidad y centrarse en la experiencia del usuario. <br>
+Inculcar práctica, perseverancia y habilidades de comunicación efectiva. <br>
+Promover una cultura de ética, responsabilidad y respeto por la privacidad de los usuarios. <br>
+                        </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="year_company">
+                        <h5>2023 - presente </h5>
+                        <h5>SENATI</h5>
+                    </div>
+                    <div class="text">
+                        <h4>Experiencia obtenida</h4>
+                        <p>
+                            Fomentar la pasión por el aprendizaje continuo. <br>
+Enseñar a resolver problemas de manera creativa y sistemática. <br>
+Promover la colaboración y el trabajo en equipo. <br>
+Destacar la importancia de escribir código de calidad y centrarse en la experiencia del usuario. <br>
+Inculcar práctica, perseverancia y habilidades de comunicación efectiva. <br>
+Promover una cultura de ética, responsabilidad y respeto por la privacidad de los usuarios. <br>
+                        </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="year_company">
+                        <h5>2023 - presente </h5>
+                        <h5>SENATI</h5>
+                    </div>
+                    <div class="text">
+                        <h4>Experiencia obtenida</h4>
+                        <p>
+                            Fomentar la pasión por el aprendizaje continuo. <br>
+Enseñar a resolver problemas de manera creativa y sistemática. <br>
+Promover la colaboración y el trabajo en equipo. <br>
+Destacar la importancia de escribir código de calidad y centrarse en la experiencia del usuario. <br>
+Inculcar práctica, perseverancia y habilidades de comunicación efectiva. <br>
+Promover una cultura de ética, responsabilidad y respeto por la privacidad de los usuarios. <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about skills">
+                <h2 class="title2">Habilidades</h2>
+                <div class="box">
+                    <h4>HTML</h4>
+                    <div class="percent">
+                        <div style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>CSS</h4>
+                    <div class="percent">
+                        <div style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>JavaScript</h4>
+                    <div class="percent">
+                        <div style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Bootstrap</h4>
+                    <div class="percent">
+                        <div style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Photoshop</h4>
+                    <div class="percent">
+                        <div style="width: 9%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Adobe XD</h4>
+                    <div class="percent">
+                        <div style="width: 5%;"></div>
+                    </div>
+                </div>
+            </div> 
+
+        </div>
+    </div>
+</body>
+</html>
